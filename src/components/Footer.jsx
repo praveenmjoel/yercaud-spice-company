@@ -1,4 +1,5 @@
 import React from 'react';
+import { assetUrl } from '../utils/assetUrl';
 
 const LINKS = {
   Shop: ['Black Pepper', 'Green Cardamom', 'Ceylon Cinnamon', 'Cloves', 'Star Anise', 'Raw Turmeric'],
@@ -13,7 +14,7 @@ export default function Footer({ onNavClick }) {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <img src="/logo.jpg" alt="The Yercaud Spice Company" className="h-14 w-auto rounded-sm mb-5" />
+            <img src={assetUrl('/logo.jpg')} alt="The Yercaud Spice Company" className="h-14 w-auto rounded-sm mb-5" />
             <p className="text-xs text-brand-muted leading-relaxed max-w-[200px]">
               Premium spices from the highland farms of Yercaud, Tamil Nadu.
               Pure. Authentic. Exceptional.

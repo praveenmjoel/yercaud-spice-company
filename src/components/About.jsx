@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { assetUrl } from '../utils/assetUrl';
 
 const PILLARS = [
   {
@@ -104,7 +105,7 @@ export default function About() {
             <div className="grid grid-cols-2 gap-3">
               <div className="aspect-[3/4] overflow-hidden">
                 <img
-                  src="/photos/mixed-spices.jpg"
+                  src={assetUrl('/photos/mixed-spices.jpg')}
                   alt="A collection of Yercaud spices"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
@@ -112,14 +113,14 @@ export default function About() {
               <div className="flex flex-col gap-3 pt-8">
                 <div className="aspect-square overflow-hidden">
                   <img
-                    src="/photos/turmeric.jpg"
+                    src={assetUrl('/photos/turmeric.jpg')}
                     alt="Raw Turmeric from Yercaud"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
                 <div className="aspect-square overflow-hidden">
                   <img
-                    src="/photos/bay-leaves.jpg"
+                    src={assetUrl('/photos/bay-leaves.jpg')}
                     alt="Bay Leaves"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
@@ -153,7 +154,7 @@ export default function About() {
       {/* Full-width image banner */}
       <div className="relative h-64 md:h-96 overflow-hidden">
         <img
-          src="/photos/cinnamon.jpg"
+          src={assetUrl('/photos/cinnamon.jpg')}
           alt="Ceylon Cinnamon sticks"
           className="w-full h-full object-cover"
         />

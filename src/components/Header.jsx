@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCart } from '../context/CartContext';
+import { assetUrl } from '../utils/assetUrl';
 
 const NAV_LINKS = [
   { label: 'Products', href: '#products' },
@@ -42,7 +43,7 @@ export default function Header({ onCartOpen, onCheckout }) {
             aria-label="Go to homepage"
           >
             <img
-              src="/logo.jpg"
+              src={assetUrl('/logo.jpg')}
               alt="The Yercaud Spice Company"
               className="h-9 lg:h-11 w-auto rounded-sm"
             />

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { assetUrl } from '../utils/assetUrl';
 
 const INITIAL = { name: '', email: '', phone: '', message: '' };
 const ERRORS_INIT = { name: '', email: '', phone: '', message: '' };
@@ -209,7 +210,7 @@ export default function Contact() {
             {/* Map placeholder */}
             <div className="relative h-48 bg-brand-card border border-brand-border overflow-hidden">
               <img
-                src="/photos/mixed-spices.jpg"
+                src={assetUrl('/photos/mixed-spices.jpg')}
                 alt="Yercaud location"
                 className="w-full h-full object-cover opacity-30"
               />

@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { assetUrl } from '../utils/assetUrl';
 
 const TICKER_ITEMS = [
   'HAND-HARVESTED',
@@ -108,7 +109,7 @@ export default function Hero({ onShopNow, onExplore }) {
         <div className="hidden lg:block relative overflow-hidden">
           <motion.div style={{ y: imgY }} className="absolute inset-0">
             <img
-              src="/photos/black-pepper.jpg"
+              src={assetUrl('/photos/black-pepper.jpg')}
               alt="Premium Black Pepper from Yercaud"
               className="w-full h-full object-cover"
             />
@@ -119,7 +120,7 @@ export default function Hero({ onShopNow, onExplore }) {
         {/* Mobile hero image */}
         <div className="lg:hidden absolute inset-0 z-0">
           <img
-            src="/photos/mixed-spices.jpg"
+            src={assetUrl('/photos/mixed-spices.jpg')}
             alt="Premium spices"
             className="w-full h-full object-cover opacity-20"
           />

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCart } from '../context/CartContext';
+import { assetUrl } from '../utils/assetUrl';
 
 const INITIAL_SHIPPING = {
   firstName: '', lastName: '', email: '', phone: '',
@@ -81,7 +82,7 @@ export default function Checkout({ onBack, onConfirm }) {
             Back to Cart
           </button>
           <div className="flex-1 h-px bg-brand-border" />
-          <img src="/logo.jpg" alt="TYSC" className="h-8 rounded-sm" />
+          <img src={assetUrl('/logo.jpg')} alt="TYSC" className="h-8 rounded-sm" />
         </div>
 
         {/* Step Indicator */}
